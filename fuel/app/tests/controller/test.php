@@ -5,11 +5,14 @@
  *
  * @group App
  * @group Controller
- * @group test
+ * @group Test
  */
 class Test_Controller_Test extends TestCase
 {
 
+    /**
+     * @test
+     */
     public function testのインデックスはウェルカムページを返すべき()
     {
         $controller = new Controller_Test(Request::forge());
@@ -18,6 +21,9 @@ class Test_Controller_Test extends TestCase
         $this->assertEquals($expected, $actual);
     }
 
+    /**
+     * @test
+     */
     public function testの下の404は404ページを返すべき()
     {
         $controller = new Controller_Test(Request::forge());
